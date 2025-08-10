@@ -15,12 +15,13 @@ FetchContent_MakeAvailable(googletest)
 
 add_executable(
         run_tests
-        strings_test.cpp
-        jsons_test.cpp
-        vector_test.cpp
         ../src/strings_util.cpp
         ../src/strings.cpp
         ../src/jsons.cpp
+        strings_test.cpp
+        jsons_test.cpp
+        vector_test.cpp
+        iterator_test.cpp
 )
 
 target_include_directories(run_tests PRIVATE ../src)
