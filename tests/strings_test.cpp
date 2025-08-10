@@ -1,6 +1,10 @@
 #include <gtest/gtest.h>
 
+#include <iostream>
+
 #include "../src/strings_util.h"
+
+using std::string;
 
 TEST(ExampleTest, BasicAssertions) {
   EXPECT_EQ(1, 1);
@@ -92,5 +96,19 @@ TEST(StringTest, SelfCopyAssignment) {
 TEST(StringTest, SelfMoveAssignment) {
   String s6("SelfMove");
   s6 = std::move(s6);  // 移动自赋值
+  SUCCEED();
+}
+
+TEST(StdStringTest, Initialization) {
+  string s1;  // Construction default, ""
+  string s2(s1);
+
+  string s3 = "hiya";  // Copy initialization
+  string s4(10, 'c');  // Construction directly
+
+  string s5("value");  // Construction directly
+
+  string s6 = string(10, 'c');  // Copy initialization
+
   SUCCEED();
 }
