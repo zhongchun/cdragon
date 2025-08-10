@@ -17,6 +17,7 @@ add_executable(
         run_tests
         strings_test.cpp
         jsons_test.cpp
+        vector_test.cpp
         ../src/strings_util.cpp
         ../src/strings.cpp
         ../src/jsons.cpp
