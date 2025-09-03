@@ -22,6 +22,7 @@ add_executable(
         jsons_test.cpp
         vector_test.cpp
         iterator_test.cpp
+        smart_pointers.cpp
 )
 
 target_include_directories(run_tests PRIVATE ../src)
